@@ -1,3 +1,7 @@
+/* Web CSS */
+html{
+  scroll-behavior: smooth;
+}
 body{
   background: linear-gradient(to top right, #24a9c5, #00d49d );
   background-repeat: no-repeat;
@@ -14,9 +18,9 @@ body{
 
 .title h1{
   color: #f3f3f3;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 60px;
-  text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6);
+  /* text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6); */
   text-align: center;
 }
 
@@ -33,11 +37,11 @@ body{
 width: 693px;
 height: 168px;
 color: #f3f3f3;
-font-weight: 200;
+font-weight: 400;
 font-size: 24px;
 margin-left: auto;
 margin-right: auto;
-text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6);
+/* text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6); */
 }
 
 .first-para fieldset{
@@ -55,21 +59,22 @@ text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6);
 
 
 .start-now {
-  position: relative;
-  top: 10.5%;
-  left: 5%;
+  display: block;
+  margin: 0 auto; 
+  margin-top: 50px;
+  width: 40%;
+  height: 72px;
   font-size: 30px;
+  text-decoration: none;
   color: rgb(234, 127, 1);
   font-weight: bold;
-  line-height: 1.067;
+  line-height: 2.5;
   text-align: center;
   z-index: 18;
-  width: 90%;
-  height: 75%;
   border: none;
   border-radius: 12px;
   background-color: rgb(255, 196, 0);
-  box-shadow: 0px 4px 0px 0px #e0ac01;
+  box-shadow: 0px 7px 0px 0px #e0ac01;
 }
 
 .start-now:hover{
@@ -77,14 +82,45 @@ text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6);
   background-color: rgb(234, 127, 1) ;
 }
 
-.start-btn-wrap {
-  margin: 0 auto; 
-  margin-top: 50px;
-  border: none;
-  border-radius: 12px;
-  background-color: rgb(243, 243, 243);
-  box-shadow: 0px 7px 8px 0px rgba(102, 102, 102, 0.5);
-  width: 308px;
-  height: 72px;
-  z-index: 16;
+
+.quiz-content{
+  margin: 0 auto;
+  width: 95%;
+  height: 768px;
+  background-color: white;
+}
+
+
+/* Mobile CSS */
+
+@media all and (max-width:480px) {
+  .title h1 {
+    font-size: 48px;
+  }
+  .first-para {
+    font-size: 21px;
+    width: 400px;
+    }
+}
+
+
+@media all and (max-width:320px) {
+  body{
+    margin: 0 auto;
+    padding: 0;
+  }
+  .title h1 {
+    font-size: 28px;
+  }
+  .first-para {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .first-para fieldset{
+      font-size: 18px;
+    }
+  .start-now{
+    width: 80%;
+  }
 }
