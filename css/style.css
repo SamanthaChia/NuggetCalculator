@@ -1,0 +1,90 @@
+body{
+  background: linear-gradient(to top right, #24a9c5, #00d49d );
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.home-background{
+  min-height: 707px;
+}
+
+.title h1{
+  color: #f3f3f3;
+  font-weight: 200;
+  font-size: 60px;
+  text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6);
+  text-align: center;
+}
+
+.nugget-logo{
+  /* box-shadow: 0px 7px 7px 0px rgb(102,102,102, 0.4); */
+  padding: 0;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-para {
+width: 693px;
+height: 168px;
+color: #f3f3f3;
+font-weight: 200;
+font-size: 24px;
+margin-left: auto;
+margin-right: auto;
+text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6);
+}
+
+.first-para fieldset{
+  text-align: center;
+  border-radius: 20px;
+  border-color: #f3f3f3;
+  padding: 25px 20px 25px 20px;
+}
+
+.first-para legend{
+  font-size: 32px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+
+.start-now {
+  position: relative;
+  top: 10.5%;
+  left: 5%;
+  font-size: 30px;
+  color: rgb(234, 127, 1);
+  font-weight: bold;
+  line-height: 1.067;
+  text-align: center;
+  z-index: 18;
+  width: 90%;
+  height: 75%;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(255, 196, 0);
+  box-shadow: 0px 4px 0px 0px #e0ac01;
+}
+
+.start-now:hover{
+  color: rgb(234, 164, 1);
+  background-color: rgb(234, 127, 1) ;
+}
+
+.start-btn-wrap {
+  margin: 0 auto; 
+  margin-top: 50px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0px 7px 8px 0px rgba(102, 102, 102, 0.5);
+  width: 308px;
+  height: 72px;
+  z-index: 16;
+}
