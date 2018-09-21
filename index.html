@@ -7,6 +7,7 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <link href="css/style.css" rel="stylesheet">
+  <script src="../NuggetCalculator/script/script.js"></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 
       <div class="input-field">
         <label for="salary-amt">Your Salary : </label><br>
-        <input type="text" name="salary-amt" class="salary-amt" placeholder="$3000">
+        <input type="text" name="salary-amt" class="salary-amt" placeholder="$3000" onchange="storeData(id)">
         <div class="slide"></div>
       </div>
       <a class="continue" href="#bills-question">Continue</a>
@@ -48,6 +49,7 @@
         All entered data will be deleted when you exit this page
       </div>
       <h2>How much are your monthly bills?</h2>
+      <p>Total Monthly Bills: $<script>getSalaryAmt()</script> </p>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
@@ -61,21 +63,22 @@
                 <img src="src/calculator_rent.png" title="bills-payable" alt="pictures for bills payable">
                 <div class="input-field">
                   <label for="rent">Rent</label><br>
-                  <input type="text" name="rent" class="rent" placeholder="$100">
+                  <input type="text" name="rent" class="rent" placeholder="$100" onchange="storeData(id)">
+
                   <div class="slide"></div>
                 </div>
             </td>
             <td><img src="src/calculator_bills.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="utilities">Utilities</label><br>
-                <input type="text" name="utilities" class="utilities" placeholder="$100">
+                <input type="text" name="utilities" class="utilities" placeholder="$100" onchange="storeData(id)">
                 <div class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_insurance.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="insurance">Insurance</label><br>
-                <input type="text" name="insurance" class="insurance" placeholder="$100">
+                <input type="text" name="insurance" class="insurance" placeholder="$100" onchange="storeData(id)">
                 <div class="slide"></div>
               </div>
             </td>
@@ -84,21 +87,21 @@
             <td><img src="src/calculator_parents.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="parents">Parents</label><br>
-                <input type="text" name="parents" class="parents" placeholder="$100">
+                <input type="text" name="parents" class="parents" placeholder="$100" onchange="storeData(id)">
                 <div class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_subscription.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label class="subs-label" for="subscriptions">Subscriptions</label><br>
-                <input type="text" name="subscriptions" class="subscriptions" placeholder="$100">
+                <input type="text" name="subscriptions" class="subscriptions" placeholder="$100" onchange="storeData(id)">
                 <div class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_others.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="others">Others</label><br>
-                <input type="text" name="others" class="others" placeholder="$100">
+                <input type="text" name="others" class="others" placeholder="$100" onchange="storeData(id)">
                 <div class="slide"></div>
               </div>
             </td>
@@ -144,33 +147,33 @@
         <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
         All entered data will be deleted when you exit this page
       </div>
-      <h2>How much of your salary would you <br> 
-      like to save every month?</h2>
+      <h2>How much of your salary would you <br>
+        like to save every month?</h2>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
         <a href="#savings-question" class="circle-button"></a>
       </div>
-      <div class="slider-field">
+
+      <div class="slider-field" id="slider-field">
         <label class="salary-amt-label">* Use the slider to change the amount</label><br><br>
-        <input type="range" name="save-amt" class="save-amt" id="save-amt" min="0" max="100" value="20">
-        <div class="min-positioning">
-        <span class="min-percentage">0%</span>
-        </div>
-        <div class="max-positioning">
-        <span class="max-percentage">100%</span>
-        </div>
-        <p>Value: <span id="demo"></span></p>
+        <script>
+          createSlider();
+        </script>
+        <span class="min-percentage"">0%</span>
+        <span class=" max-percentage">100%</span>
+
+        <p class="save-value">Value($): <input id="value" type="text" onchange="snapSavingsValue()"></input></p>
 
         <script>
-            var slider = document.getElementById("save-amt");
-            var output = document.getElementById("demo");
-            output.innerHTML = slider.value + "%";
-            
-            slider.oninput = function() {
-              output.innerHTML = this.value +"%";
-            }
-          </script>
+          var slider = document.getElementById("save-amt");
+          var output = document.getElementById("value");
+          output.value = slider.value;
+
+          slider.oninput = function () {
+            output.value = this.value;
+          }
+        </script>
 
       </div>
 
@@ -190,5 +193,4 @@
     </section>
 
 </body>
-
 </html>
