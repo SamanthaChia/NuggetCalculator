@@ -13,24 +13,99 @@
   <section id="home">
     <div class="home-background">
       <div class="title">
-        <img class="nugget-logo" src="src/n Logo.png" title="Nugget-Logo" alt="Nugget-Logo" width="156" />
-        <h1>Nugget Budget Calculator</h1>
+        <img class="nugget-logo" src="src/Nugget_Logo_Square_White.png" title="Nugget-Logo" alt="Nugget-Logo" width="120" />
+        <h1>Budget Planner</h1>
       </div>
       <div class="first-para">
-        <fieldset>
-          <legend>How</legend>
-          Get your budget in less than 3 minutes by answering 3 simple questions!
-        </fieldset>
+        Get your budget in less than 3 minutes by answering 3 simple questions!
         <a class="start-now" href="#salary-question">Start Now</a>
       </div>
     </div>
   </section>
   <div class="quiz-content">
-  <section id="salary-question">
-    <div>
-
-    </div>
-  </section>
+    <section id="salary-question" class="salary-question">
+      <div class="pro-tip">
+        <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+        All entered data will be deleted when you exit this page
+      </div>
+      <h2>What's your monthly take home salary?</h2>
+      <div class="page-buttons">
+        <a href="#salary-question" class="circle-button"></a>
+        <a href="#bills-question" class="circle-button"></a>
+        <a href="#savings-question" class="circle-button"></a>
+      </div>
+      <div class="input-field">
+        <label for="salary-amt">Your Salary : </label><br>
+        <input type="text" name="salary-amt" class="salary-amt" placeholder="e.g. 3000">
+        <div class="slide"></div>
+      </div>
+      <a class="continue" href="#bills-question">Continue</a>
+    </section>
+    <section id="bills-question" class="bills-question">
+      <div class="pro-tip">
+        <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+        All entered data will be deleted when you exit this page
+      </div>
+      <h2>How much are your monthly bills?</h2>
+      <div class="page-buttons">
+        <a href="#salary-question" class="circle-button"></a>
+        <a href="#bills-question" class="circle-button"></a>
+        <a href="#savings-question" class="circle-button"></a>
+      </div>
+      <div class="space">
+        <table>
+          <tr>
+            <td>
+              <div>
+                <img src="src/calculator_rent.png" title="bills-payable" alt="pictures for bills payable">
+                <div class="input-field">
+                  <label for="rent">Rent</label><br>
+                  <input type="text" name="rent" class="rent" placeholder="e.g. 100">
+                  <div class="slide"></div>
+                </div>
+            </td>
+            <td><img src="src/calculator_bills.png" title="bills-payable" alt="pictures for bills payable">
+              <div class="input-field">
+                <label for="utilities">Utilities</label><br>
+                <input type="text" name="utilities" class="utilities" placeholder="e.g. 100">
+                <div class="slide"></div>
+              </div>
+            </td>
+            <td><img src="src/calculator_insurance.png" title="bills-payable" alt="pictures for bills payable">
+              <div class="input-field">
+                <label for="insurance">Insurance</label><br>
+                <input type="text" name="insurance" class="insurance" placeholder="e.g. 100">
+                <div class="slide"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><img src="src/calculator_parents.png" title="bills-payable" alt="pictures for bills payable">
+              <div class="input-field">
+                <label for="parents">Parents</label><br>
+                <input type="text" name="parents" class="parents" placeholder="e.g. 100">
+                <div class="slide"></div>
+              </div>
+            </td>
+            <td><img src="src/calculator_subscription.png" title="bills-payable" alt="pictures for bills payable">
+              <div class="input-field">
+                <label class="subs-label" for="subscriptions">Subscriptions</label><br>
+                <input type="text" name="subscriptions" class="subscriptions" placeholder="e.g. 100">
+                <div class="slide"></div>
+              </div>
+            </td>
+            <td><img src="src/calculator_others.png" title="bills-payable" alt="pictures for bills payable">
+              <div class="input-field">
+                <label for="others">Others</label><br>
+                <input type="text" name="others" class="others" placeholder="e.g. 100">
+                <div class="slide"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <a class="continue" href="#savings-question">Continue</a>
+    </section>
   </div>
 </body>
 
