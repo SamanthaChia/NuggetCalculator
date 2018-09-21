@@ -274,6 +274,15 @@ table label{
   cursor: pointer;
 }
 
+.save-amt::-moz-range-progress{
+  background:#666666;
+}
+
+.save-amt::-webkit-range-progress{
+  background:#666666;
+}
+
+
 .slider-field{
   width: 654px;
   margin: 0 auto;
@@ -282,8 +291,8 @@ table label{
 
 .salary-amt-label{
   color:#c5c5c5;
-  font-size: 32px;
-  margin-left:20px;
+  font-size: 20px;
+  margin-left:150px;
 }
 
 
