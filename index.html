@@ -153,9 +153,25 @@
       </div>
       <div class="slider-field">
         <label class="salary-amt-label">* Use the slider to change the amount</label><br><br>
-        <input type="range" name="save-amt" class="save-amt" min="0" max="100" value="20">
-        <div class="slide"></div>
+        <input type="range" name="save-amt" class="save-amt" id="save-amt" min="0" max="100" value="20">
+        <span class="min-percentage"">0%</span>
+        <span class="max-percentage">100%</span>
+
+        <p>Value: <span id="demo"></span></p>
+
+        <script>
+            var slider = document.getElementById("save-amt");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value + "%";
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value +"%";
+            }
+          </script>
+
       </div>
+
+      <a class="view-results" href="#results">View Results</a>
 
     </section>
   </div>

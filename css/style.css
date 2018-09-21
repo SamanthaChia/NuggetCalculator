@@ -306,6 +306,17 @@ table label {
   margin-left:150px;
 }
 
+.max-percentage{
+  float:right;
+  font-weight:400;
+  color:#c5c5c5
+}
+
+.min-percentage{
+  font-weight:400;
+  color:#c5c5c5;
+}
+
 
 /* Mobile CSS */
 
