@@ -2,9 +2,10 @@
 html{
   scroll-behavior: smooth;
 }
+
 body{
-  background: linear-gradient(to top right, #24a9c5, #00d49d );
-  background-repeat: no-repeat;
+  /* background: linear-gradient(to top, #24a9c5, #00d0a0 );
+  background-repeat: no-repeat; */
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -13,22 +14,24 @@ body{
 }
 
 .home-background{
-  min-height: 707px;
+  background: linear-gradient(to top, #24a9c5, #00d0a0 );
+  background-repeat: no-repeat;
+  min-height: 728px;
 }
 
 .title h1{
-  color: #f3f3f3;
-  font-weight: 400;
-  font-size: 60px;
-  /* text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6); */
+  color: white;
+  font-weight: 700;
+  font-size: 48px;
   text-align: center;
+  /* margin-top: 0px; */
 }
 
 .nugget-logo{
-  /* box-shadow: 0px 7px 7px 0px rgb(102,102,102, 0.4); */
   padding: 0;
   display: block;
-  margin-top: 20px;
+  padding-top: 40px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -39,57 +42,216 @@ height: 168px;
 color: #f3f3f3;
 font-weight: 400;
 font-size: 24px;
+margin-top: 125px;
 margin-left: auto;
 margin-right: auto;
-/* text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.6); */
-}
-
-.first-para fieldset{
-  text-align: center;
-  border-radius: 20px;
-  border-color: #f3f3f3;
-  padding: 25px 20px 25px 20px;
-}
-
-.first-para legend{
-  font-size: 32px;
-  padding-left: 70px;
-  padding-right: 70px;
+text-align: center;
 }
 
 
-.start-now {
+
+a {
   display: block;
   margin: 0 auto; 
-  margin-top: 50px;
-  width: 40%;
-  height: 72px;
+  margin-top: 115px;
+  width: 300px;
+  height: 62px;
   font-size: 30px;
   text-decoration: none;
-  color: rgb(234, 127, 1);
+  color: #f3f3f3;
+  text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.3);
   font-weight: bold;
-  line-height: 2.5;
+  line-height: 2;
   text-align: center;
   z-index: 18;
   border: none;
   border-radius: 12px;
-  background-color: rgb(255, 196, 0);
-  box-shadow: 0px 7px 0px 0px #e0ac01;
+  background-color: #24a9c5;
+  border: 2px solid #f3f3f3;
 }
 
-.start-now:hover{
-  color: rgb(234, 164, 1);
-  background-color: rgb(234, 127, 1) ;
+a:hover{
+  color: #24a9c5;
+  background-color: #f3f3f3;
+  border: 2px solid #24a9c5;
+  box-shadow: 0px 7px rgb(102, 102, 102, 0.3);
 }
 
-
+/* Questionnaire Portion */
 .quiz-content{
   margin: 0 auto;
-  width: 95%;
-  height: 768px;
-  background-color: white;
+  /* width: 90%; */
+  height: auto;
+  color: #666666;
+  background-color: whitesmoke;
 }
 
+.pro-tip{
+  color: #666666;
+  width:fit-content;
+  margin:0 auto;
+  padding-top:20px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #00d0a0;
+  font-size: 36px;
+  font-weight: 600;
+  margin-left: 80px;
+  /* border: red solid 1px; */
+}
+
+label{
+  color: #666666;
+  font-size: 32px;
+}
+
+.salary-question .continue {
+  margin-top: 200px;
+}
+
+/* Salary Question */
+
+.salary-question{
+  min-height: 728px;
+  background-color: whitesmoke;
+}
+
+.salary-question .input-field{
+  width: 654px;
+  margin: 0 auto;
+  margin-top: 170px;
+}
+
+label{
+  font-weight: 600;
+}
+
+.slide{
+  height: 5px;
+  width: 0%;
+  transition: width 1.5s;
+}
+
+.salary-question input{
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  color: #666666;
+  border: none;
+  border-bottom: 2px solid #666666;
+  outline: none;
+  background-color: #f3f3f3;
+}
+
+.salary-amt:focus{
+  border-bottom:none;
+}
+
+.salary-amt:focus + .slide{
+  background-color: #28a6c1;
+  width: 100%;
+}
+
+.page-buttons{
+  float: right;
+  margin-top: 40px;
+  margin-right: 45px;
+  height: fit-content;
+}
+
+.page-buttons .circle-button{
+  width: 15px;
+  height: 15px;
+  margin-top: 50px;
+  background-color: #d7d7d7;
+  border-radius: 50%;
+}
+
+.circle-button:active{
+  border: 2px solid #666666;
+  background-color: #f3f3f3;
+}
+
+.circle-button:hover{
+  border: 2px solid #666666;
+  background-color: #f3f3f3;
+}
+
+/* Bills Question */
+
+.bills-question{
+  min-height: 728px;
+}
+
+.space{
+  margin-top: 0px;
+}
+
+table{
+  width: 1072px;
+  height: 442px;
+  margin: 0 auto;
+  margin-top: 0px;
+  /* border: blue solid 1px; */
+}
+
+td {
+  /* padding: 10px 62px 10px 62px; */
+  /* text-align: center; */
+  /* border: #24a9c5 solid 1px; */
+}
+
+.bills-question .input-field ::placeholder{
+  /* text-align: center; */
+}
+
+table img {
+  width: 130px;
+  height: 130px;
+  margin-left: 12%;
+  float: left;
+}
+
+table label{
+  font-size: 21px;
+}
+
+.bills-question .input-field{
+  width: 110px;
+  margin-top: 3%;
+  margin-right: 12%;
+  float: right;
+}
+.slide{
+  height: 3px;
+  width: 0%;
+  transition: width 1.5s;
+}
+.bills-question input{
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  color: #666666;
+  border: none;
+  border-bottom: 2px solid #666666;
+  outline: none;
+  background-color: #f3f3f3;
+}
+
+.bills-question input:focus{
+  border-bottom:none;
+}
+
+.bills-question input:focus + .slide{
+  background-color: #28a6c1;
+  width: 100%;
+}
+
+.bills-question .continue{
+  margin-top: 0px;
+}
 
 /* Mobile CSS */
 
