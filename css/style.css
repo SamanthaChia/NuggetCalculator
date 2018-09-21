@@ -81,7 +81,7 @@ a:hover {
 .quiz-content {
   margin: 0 auto;
   /* width: 90%; */
-  height: 1600px;
+  height: auto;
   color: #666666;
   background-color: #f3f3f3;
 }
@@ -315,6 +315,22 @@ table label {
 .min-percentage{
   font-weight:400;
   color:#c5c5c5;
+}
+
+.save-value{
+  text-align:center;
+  font-size:24px;
+}
+
+.save-value input {
+  outline: none;
+  width:100px;
+  text-align:center;
+  background-color:#f3f3f3;
+  border: none;
+  font-size:24px;
+  color: #666666;
+  border-bottom: 2px solid #666666;
 }
 
 
