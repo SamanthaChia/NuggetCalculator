@@ -12,6 +12,8 @@ html {
     background-repeat: no-repeat;
   }
 
+/* display weekly budget*/
+
   .weekly-budget{
       height:708px;
       padding-top:30px;
@@ -54,6 +56,7 @@ html {
     margin-left: 140px;
 }
 
+/* About Nugget*/
 .about-content p{
     color:#666666;
     font-size: 30px;
@@ -96,6 +99,8 @@ a {
       margin-top:-303px;
       margin-right:-420px;
   }
+
+  /* Wishlist portion*/
 
   fieldset{
       margin:0 auto;
