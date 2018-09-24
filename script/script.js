@@ -45,7 +45,8 @@ function getSalaryAmt() {
     let slider = document.getElementById("save-amt");
 
     slider.setAttribute("max", salaryAmt);
-    document.getElementById("slider").appendChild(slider);
+    let sliderDiv = document.getElementById("slider-field");
+    sliderDiv.insertBefore(slider, sliderDiv.childNodes[2]);
     return salaryAmt;
 }
 
@@ -59,7 +60,7 @@ function createSlider() {
     slider.setAttribute("id", "save-amt");
     slider.setAttribute("min", "0");
     slider.setAttribute("max", maxVal);
-    document.getElementById("slider").appendChild(slider);
+    document.getElementById("slider-field").appendChild(slider);
 }
 
 function snapSavingsValue() {
