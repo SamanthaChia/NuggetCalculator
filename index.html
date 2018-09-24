@@ -44,7 +44,7 @@
       <form action="viewResults.html">
         <div class="input-field">
           <label for="salary-amt">Your Salary </label><br>
-          <input type="number" name="salary-amt" id="salary-amt" class="salary-amt" placeholder="eg. $3000" onchange="storeSalary(id)"
+          <input type="number" name="salary-amt" id="salary-amt" class="salary-amt" placeholder="eg. $3000" onchange="storeSalary(id)" autocomplete="off"
             required>
           <div class="slide" id="slide"></div>
         </div>
@@ -70,7 +70,7 @@
                 <img src="src/calculator_rent.png" title="bills-payable" alt="pictures for bills payable">
                 <div class="input-field">
                   <label for="rent">Rent</label><br>
-                  <input type="number" name="rent" class="rent" id="rent" placeholder="eg. $100" onchange="storeData(id)">
+                  <input type="number" name="rent" class="rent" id="rent" placeholder="eg. $100" onchange="storeData(id)" autocomplete="off">
 
                   <div id="slide" class="slide"></div>
                 </div>
@@ -78,14 +78,14 @@
             <td><img src="src/calculator_bills.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="utilities">Utilities</label><br>
-                <input type="number" name="utilities" class="utilities" id="utilities" placeholder="eg. $100" onchange="storeData(id)">
+                <input type="number" name="utilities" class="utilities" id="utilities" placeholder="eg. $100" onchange="storeData(id)" autocomplete="off">
                 <div id="slide" class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_insurance.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="insurance">Insurance</label><br>
-                <input type="number" name="insurance" class="insurance" id="insurance" placeholder="eg. $100" onchange="storeData(id)">
+                <input type="number" name="insurance" class="insurance" id="insurance" placeholder="eg. $100" onchange="storeData(id)" autocomplete="off">
                 <div id="slide" class="slide"></div>
               </div>
             </td>
@@ -94,7 +94,7 @@
             <td><img src="src/calculator_parents.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="parents">Parents</label><br>
-                <input type="number" name="parents" class="parents" id="parents" placeholder="eg. $100" onchange="storeData(id)">
+                <input type="number" name="parents" class="parents" id="parents" placeholder="eg. $100" onchange="storeData(id)" autocomplete="off">
                 <div class="slide"></div>
               </div>
             </td>
@@ -102,14 +102,14 @@
               <div class="input-field">
                 <label class="subs-label" for="subscriptions">Subscriptions</label><br>
                 <input type="number" name="subscriptions" class="subscriptions" id="subscriptions" placeholder="eg. $100"
-                  onchange="storeData(id)">
+                  onchange="storeData(id)" autocomplete="off">
                 <div id="slide" class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_others.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="others">Others</label><br>
-                <input type="number" name="others" class="others" id="others" placeholder="eg. $100" onchange="storeData(id)">
+                <input type="number" name="others" class="others" id="others" placeholder="eg. $100" onchange="storeData(id)" autocomplete="off">
                 <div id="slide" class="slide"></div>
               </div>
             </td>
@@ -167,7 +167,6 @@
         <script>
           createSlider();
         </script>
-        <div class="slider" id="slider"></div>
         <span class="min-percentage">0%</span>
         <span class=" max-percentage">100%</span>
 
