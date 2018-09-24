@@ -8,15 +8,18 @@ html {
     margin: 0 auto;
     padding: 0;
     font-family: "Poppins";
-    background: linear-gradient(to top, #24a9c5, #00d0a0);
-    background-repeat: no-repeat;
   }
 
 /* display weekly budget*/
 
   .weekly-budget{
-      height:708px;
-      padding-top:30px;
+      padding:0;
+      /* padding-top:30px; */
+      margin:0 auto;
+      margin-top:0px;
+      background: linear-gradient(to top, #24a9c5, #00d0a0);
+      background-repeat: no-repeat;
+      height:768px;
   }
 
   h3{
@@ -24,6 +27,7 @@ html {
     color:#f3f3f3;
     font-size:50px;
     margin-left:520px;
+    margin-top: 0px;
   }
 
   .circle-amt{
@@ -54,6 +58,11 @@ html {
     color:#00d0a0;
     font-size: 65px;
     margin-left: 140px;
+    margin-top:0;
+}
+
+.find-out-more{
+    margin : 0 auto;
 }
 
 /* About Nugget*/
@@ -64,29 +73,34 @@ html {
 }
 
 a {
-    display: block;
-    margin-left:140px;
-    margin-top: 45px;
-    width: 300px;
-    height: 62px;
-    font-size: 30px;
-    text-decoration: none;
-    color: #f3f3f3;
-    text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.3);
-    font-weight: bold;
-    line-height: 2;
-    text-align: center;
-    z-index: 18;
-    border: none;
-    border-radius: 12px;
-    background-color: #24a9c5;
-    border: 2px solid #f3f3f3;
+  display: block;
+  margin: 0 auto;
+  margin-top: 160px;
+  width: 300px;
+  height: 62px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #f3f3f3;
+  font-weight: bold;
+  line-height: 2;
+  text-align: center;
+  z-index: 18;
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 2px solid #f3f3f3;
   }
   
   a:hover {
     color: #24a9c5;
     background-color: #f3f3f3;
     border: 2px solid #24a9c5;
+  }
+
+  .see-features{
+    background-color: #24a9c5;
+    margin-left:140px;
+    margin-top:0px;
   }
 
   .phone-template{
