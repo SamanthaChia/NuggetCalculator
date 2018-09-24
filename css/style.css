@@ -250,6 +250,11 @@ table label {
   margin-top: 0px;
 }
 
+.total-bills-para{
+  border: red solid 1px;
+  width:fit-content;
+}
+
 /* Saving Question*/
 
 .savings-question{
@@ -519,6 +524,7 @@ h3{
 
 .max-positioning{
   margin-top:-20px;
+  }
 }
 
 @media all and (max-width:320px) {

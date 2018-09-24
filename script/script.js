@@ -1,8 +1,24 @@
+const totalBills = [];
+const reduceBillsArr = (accum, currentVal) => accum + currentVal;
+
+
 function storeData(id) {
+    let attrVal = document.getElementById(id).value;
+    attrVal = parseInt(attrVal);
+    totalBills.push(attrVal);
+    getBills();
+}
+
+function getBills(){
+    let bills = totalBills.reduce(reduceBillsArr);
+    document.getElementById("total-bills").innerHTML = bills;
+}
+
+function storeSalary(id) {
     let attrName = document.getElementById(id).id;
     let attrVal = document.getElementById(id).value;
-
     sessionStorage.setItem(attrName, attrVal);
+    getSalaryAmt();
 }
 
 function getSalaryAmt() {
@@ -10,7 +26,6 @@ function getSalaryAmt() {
     let slider = document.getElementById("save-amt");
     slider.setAttribute("max", salaryAmt);
     document.getElementById("slider-field").appendChild(slider);
-
     return salaryAmt;
 }
 
@@ -29,7 +44,6 @@ function createSlider() {
 
 function snapSavingsValue() {
     let snapVal = document.getElementById("value").value;
-
     let slider = document.getElementById("save-amt");
 
     slider.value = snapVal;
