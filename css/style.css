@@ -50,41 +50,50 @@ body {
   text-align: center;
 }
 
-a {
+a,
+button {
   display: block;
   margin: 0 auto;
-  margin-top: 115px;
+  margin-top: 160px;
   width: 300px;
   height: 62px;
   font-size: 30px;
   text-decoration: none;
   color: #f3f3f3;
-  text-shadow: 2px 2px 4px rgb(102, 102, 102, 0.3);
   font-weight: bold;
   line-height: 2;
   text-align: center;
   z-index: 18;
   border: none;
   border-radius: 12px;
-  background-color: #24a9c5;
+  background-color: transparent;
   border: 2px solid #f3f3f3;
 }
 
-a:hover {
+.continue,
+button {
+  background-color: #24a9c5;
+}
+
+.results-btn {
+  margin-top: 180px;
+}
+
+a:hover,
+button:hover {
   color: #24a9c5;
   background-color: #f3f3f3;
   border: 2px solid #24a9c5;
-  box-shadow: 0px 7px rgb(102, 102, 102, 0.3);
 }
 
 /* Questionnaire Portion */
 
 .quiz-content {
   margin: 0 auto;
-  /* width: 90%; */
   height: auto;
   color: #666666;
   background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
 }
 
 .pro-tip {
@@ -108,8 +117,17 @@ label {
   font-size: 32px;
 }
 
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .salary-question .continue {
-  margin-top: 200px;
+  margin-top: 220px;
 }
 
 /* Salary Question */
@@ -156,7 +174,7 @@ label {
 
 .page-buttons {
   float: right;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-right: 45px;
   height: fit-content;
 }
@@ -251,8 +269,9 @@ table label {
 }
 
 .total-bills-para{
-  border: red solid 1px;
   width:fit-content;
+  position: absolute;
+  right: 5%;
 }
 
 /* Saving Question*/
@@ -309,10 +328,10 @@ table label {
 .salary-amt-label{
   color:#c5c5c5;
   font-size: 20px;
-  margin-left:150px;
+  text-align: center;
 }
 
-.max-percentage{
+.max-percentage {
   float:right;
   margin-top:-25px;
   font-weight:400;
@@ -345,6 +364,14 @@ h3{
   font-size:24px;
   color: #666666;
   border-bottom: 2px solid #666666;
+}
+
+.slider-field{
+  margin-top:80px;
+}
+
+button{
+  margin-top: 70px;
 }
 
 
@@ -480,7 +507,7 @@ h3{
 .slider-field{
   width: 410px;
   margin: 0 auto;
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 .save-amt{

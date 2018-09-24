@@ -8,7 +8,16 @@
   <meta name="description" content="">
   <link href="css/style.css" rel="stylesheet">
   <script src="../NuggetCalculator/script/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+<script>
+  $(document).keypress(
+    function (event) {
+      if (event.which == '13') {
+        event.preventDefault();
+      }
+    });
+</script>
 
 <body>
   <section id="home">
@@ -25,31 +34,29 @@
   </section>
   <div class="quiz-content">
     <section id="salary-question" class="salary-question">
-      <div class="pro-tip">
-        <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
-        All entered data will be deleted when you exit this page
-      </div>
       <h2>What's your monthly take home salary?</h2>
+      <span id="error-msg"></span>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
         <a href="#savings-question" class="circle-button"></a>
       </div>
-
-      <div class="input-field">
-        <label for="salary-amt">Your Salary : </label><br>
-        <input type="text" name="salary-amt" id="salary-amt" class="salary-amt" placeholder="$3000" onchange="storeSalary(id)">
-        <div class="slide"></div>
-      </div>
-      <a class="continue" href="#bills-question">Continue</a>
+      <form action="plain.html">
+        <div class="input-field">
+          <label for="salary-amt">Your Salary </label><br>
+          <input type="number" name="salary-amt" id="salary-amt" class="salary-amt" placeholder="eg. $3000" onchange="storeSalary(id)"
+            required>
+          <div class="slide" id="slide"></div>
+        </div>
+        <div class="pro-tip">
+          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+          All entered data will be deleted when you exit this page
+        </div>
+        <a class="continue" href="#bills-question">Continue</a>
     </section>
     <section id="bills-question" class="bills-question">
-      <div class="pro-tip">
-        <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
-        All entered data will be deleted when you exit this page
-      </div>
       <h2>How much are your monthly bills?</h2>
-      <p class="total-bills-para">Total Monthly Bills: $<span id="total-bills"></span></p>
+      <p class="total-bills-para">Total Monthly Bills: $<span id="total-bills">0</span></p>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
@@ -63,23 +70,23 @@
                 <img src="src/calculator_rent.png" title="bills-payable" alt="pictures for bills payable">
                 <div class="input-field">
                   <label for="rent">Rent</label><br>
-                  <input type="text" name="rent" class="rent" id="rent" placeholder="$100" onchange="storeData(id)">
+                  <input type="number" name="rent" class="rent" id="rent" placeholder="eg. $100" onchange="storeData(id)">
 
-                  <div class="slide"></div>
+                  <div id="slide" class="slide"></div>
                 </div>
             </td>
             <td><img src="src/calculator_bills.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="utilities">Utilities</label><br>
-                <input type="text" name="utilities" class="utilities" id="utilities" placeholder="$100" onchange="storeData(id)">
-                <div class="slide"></div>
+                <input type="number" name="utilities" class="utilities" id="utilities" placeholder="eg. $100" onchange="storeData(id)">
+                <div id="slide" class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_insurance.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="insurance">Insurance</label><br>
-                <input type="text" name="insurance" class="insurance" id="insurance" placeholder="$100" onchange="storeData(id)">
-                <div class="slide"></div>
+                <input type="number" name="insurance" class="insurance" id="insurance" placeholder="eg. $100" onchange="storeData(id)">
+                <div id="slide" class="slide"></div>
               </div>
             </td>
           </tr>
@@ -87,26 +94,31 @@
             <td><img src="src/calculator_parents.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="parents">Parents</label><br>
-                <input type="text" name="parents" class="parents" id="parents" placeholder="$100" onchange="storeData(id)">
+                <input type="number" name="parents" class="parents" id="parents" placeholder="eg. $100" onchange="storeData(id)">
                 <div class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_subscription.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label class="subs-label" for="subscriptions">Subscriptions</label><br>
-                <input type="text" name="subscriptions" class="subscriptions" id="subscriptions" placeholder="$100" onchange="storeData(id)">
-                <div class="slide"></div>
+                <input type="number" name="subscriptions" class="subscriptions" id="subscriptions" placeholder="eg. $100"
+                  onchange="storeData(id)">
+                <div id="slide" class="slide"></div>
               </div>
             </td>
             <td><img src="src/calculator_others.png" title="bills-payable" alt="pictures for bills payable">
               <div class="input-field">
                 <label for="others">Others</label><br>
-                <input type="text" name="others" class="others" id="others" placeholder="$100" onchange="storeData(id)">
-                <div class="slide"></div>
+                <input type="number" name="others" class="others" id="others" placeholder="eg. $100" onchange="storeData(id)">
+                <div id="slide" class="slide"></div>
               </div>
             </td>
           </tr>
         </table>
+        <div class="pro-tip">
+          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+          All entered data will be deleted when you exit this page
+        </div>
       </div>
       <div class="bills-mobile">
         <div class="input-field">
@@ -143,12 +155,7 @@
       <a class="continue" href="#savings-question">Continue</a>
     </section>
     <section id="savings-question" class="savings-question">
-      <div class="pro-tip">
-        <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
-        All entered data will be deleted when you exit this page
-      </div>
-      <h2>How much of your salary would you <br>
-        like to save every month?</h2>
+      <h2>How much of your salary would you like to save every month?</h2>
       <div class="page-buttons">
         <a href="#salary-question" class="circle-button"></a>
         <a href="#bills-question" class="circle-button"></a>
@@ -156,15 +163,19 @@
       </div>
 
       <div class="slider-field" id="slider-field">
-        <label class="salary-amt-label">* Use the slider to change the amount</label><br><br>
+        <p class="salary-amt-label">* Use the slider to change the amount</p><br><br>
         <script>
           createSlider();
         </script>
-        <span class="min-percentage"">0%</span>
+        <div class="slider" id="slider"></div>
+        <span class="min-percentage">0%</span>
         <span class=" max-percentage">100%</span>
 
-        <p class="save-value">Value($): <input id="value" type="text" onchange="snapSavingsValue()"></input></p>
-
+        <p class="save-value">Value($): <input id="value" type="text" onchange="snapSavingsValue()"></p>
+        <div class="pro-tip">
+          <img class="pro-tip-img" src="src/warning.png" title="warning" alt="warning" width="20" height="20" />
+          All entered data will be deleted when you exit this page
+        </div>
         <script>
           var slider = document.getElementById("save-amt");
           var output = document.getElementById("value");
@@ -176,21 +187,10 @@
         </script>
 
       </div>
-
-      <a class="view-results" href="#weekly-budget">View Results</a>
-
+      <button class="results-btn" type="submit" onclick="validateForm()">View Results</button>
+      </form>
     </section>
   </div>
-    <section id="weekly-budget" class="weekly-budget">
-        <div class="home-background">
-      <h3>Your weekly budget</h3>
-          <div class="circle-amt"></div>
-          <div class="text-below-circle">
-          <p>Manual input can be tedious.</p>
-          <p>An automated solution is coming your way!</p>
-          </div>
-        </div>
-    </section>
-
 </body>
+
 </html>
