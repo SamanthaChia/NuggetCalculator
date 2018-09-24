@@ -277,7 +277,7 @@ table label {
 /* Saving Question*/
 
 .savings-question{
-  min-height:728px;
+  min-height:760px;
 }
 
 .save-amt{
@@ -333,7 +333,6 @@ table label {
 
 .max-percentage {
   float:right;
-  margin-top:-25px;
   font-weight:400;
   color:#c5c5c5
 }
@@ -350,6 +349,7 @@ h3{
   margin-left:520px;
   padding-top:80px;
 }
+
 .save-value{
   text-align:center;
   font-size:24px;
@@ -398,6 +398,8 @@ button{
     font-family: "Roboto";
     max-width: 480px;
     overflow-y:visible;
+    padding:0;
+    margin:0;
   }
   .title h1 {
     font-size: 48px;
@@ -501,7 +503,7 @@ button{
 
 
 .savings-question .pro-tip{
-  padding-top:90px;
+  padding-top:120px;
 }
 
 .slider-field{
@@ -551,6 +553,21 @@ button{
 
 .max-positioning{
   margin-top:-20px;
+  }
+
+  h3{
+    font-size:40px;
+    margin-left:50px;
+    padding-top:130px;
+  }
+
+  .circle-amt{
+    width:200px;
+    height:200px;
+  }
+
+  .text-below-circle{
+    font-size:20px;
   }
 }
 
