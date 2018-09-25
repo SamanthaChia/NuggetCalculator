@@ -391,10 +391,10 @@ button{
 }
 
 /* Mobile CSS */
-@media only screen and (max-width:480px) {
+@media only screen and (max-width: 767.98px) and (min-width:576px) {
   body {
     font-family: "Roboto";
-    max-width: 480px;
+    max-width: 767.98px;
     overflow-y:visible;
     padding:0;
     margin:0;
@@ -469,6 +469,7 @@ button{
 
   .bills-mobile {
     display: block;
+    margin-right:150px;
   }
   .bills-mobile .input-field {
     width: 260px;
@@ -496,7 +497,7 @@ button{
   /* savings qn */
 
   .savings-question {
-    max-width:480px;
+    max-width:767.98px;
   }
 
 
@@ -505,20 +506,20 @@ button{
 }
 
 .slider-field{
-  width: 410px;
+  width: 500px;
   margin: 0 auto;
   margin-top: 60px;
 }
 
 .save-amt{
   -webkit-appearance: none;
-  width: 50%;
+  width: 70%;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  margin-left:110px;
+  margin-left:60px;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -526,14 +527,14 @@ button{
 .salary-amt-label{
   color:#c5c5c5;
   font-size: 15px;
-  margin-left:85px;
+  margin-left:30px;
 }
 
 .max-percentage{
   float:none;
-  margin-left:280px;
+  margin-left:290px;
   font-weight:400;
-  color:#c5c5c5
+  color:#c5c5c5;
 }
 
 .bills-question input[type="text"]
@@ -542,7 +543,7 @@ button{
 }
 
 .min-percentage{
-  margin-left:110px;
+  margin-left:64px;
 }
 
 .min-positioning{
@@ -569,7 +570,7 @@ button{
   }
 }
 
-@media all and (max-width:320px) {
+@media only screen and (max-width: 991.98px) and (min-width:768px) {
   body {
     margin: 0 auto;
     padding: 0;

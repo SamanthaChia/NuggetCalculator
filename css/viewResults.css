@@ -180,3 +180,48 @@ a {
     font-family: "Poppins";
     box-sizing: border-box;
   }
+
+  /* Mobile CSS */
+@media only screen and (max-width: 767.98px) and (min-width:576px) {
+    body {
+        font-family: "Roboto";
+        max-width: 767.98px;
+        padding:0;
+        margin:0;
+      }
+
+      /* display results page */
+
+      h3{
+        font-weight:400;
+        color:#f3f3f3;
+        font-size:30px;
+        margin-left:240px;
+        padding-top:30px;
+      }
+
+      .circle-amt{
+        width:250px;
+        height:250px;
+        margin-top:0px;
+      }
+
+      .text-below-circle{
+        font-size:23px;
+        text-align:center;
+        margin-top:40px;
+      }
+
+      .find-out-more{
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) and (min-width:768px) {
+    body {
+        font-family: "Roboto";
+        max-width: 991.98px;
+        padding:0;
+        margin:0;
+      }
+  }
