@@ -92,6 +92,8 @@ function getWeeklyBudget(){
     let parentDiv = document.getElementById("circle-amt");
     let para = document.createElement("p");
     let weeklyBudget = sessionStorage.getItem("budget");
+    parseFloat(weeklyBudget);
+    weeklyBudget = Math.floor(weeklyBudget);
     var budget = document.createTextNode(weeklyBudget);
     para.appendChild(budget);  
     console.log(para);
