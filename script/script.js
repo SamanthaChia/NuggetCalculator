@@ -11,6 +11,8 @@ function storeData(id) {
 
 function getBills() {
     let bills = totalBills.reduce(reduceBillsArr);
+    console.log(bills);
+    sessionStorage.setItem("bills", bills);
     document.getElementById("total-bills").innerHTML = bills;
 }
 
@@ -28,16 +30,16 @@ function validateForm() {
     var fields = document.getElementsByClassName("input-field").value;
     console.log(fields);
 
-    if(fields == undefined)
-    {
-      document.getElementById("slide").style.backgroundColor = "red";
-      document.getElementById("error-msg").innerHTML= "* Field is required! ";
-      document.getElementById("error-msg").style.color= "red";
-      document.getElementById("error-msg").style.marginLeft = "80px";
-      document.getElementById("error-msg").style.fontStyle= "italic";
+    if (fields == undefined) {
+        document.getElementById("slide").style.backgroundColor = "red";
+        document.getElementById("error-msg").innerHTML = "* Field is required! ";
+        document.getElementById("error-msg").style.color = "red";
+        document.getElementById("error-msg").style.marginLeft = "80px";
+        document.getElementById("error-msg").style.fontStyle = "italic";
     }
-
-
+    else{
+        tabulateWeeklyBudget();
+    }
 }
 
 function getSalaryAmt() {
@@ -73,13 +75,26 @@ function snapSavingsValue() {
 function tabulateWeeklyBudget() {
     let salary = sessionStorage.getItem("salary-amt");
     parseInt(salary);
-    let totalBills = totalBills.reduce(reduceBillsArr);
+    let totalBills = sessionStorage.getItem("bills")
     parseInt(totalBills);
+
     let amtAfterReduc = salary - totalBills;
 
-    let savings = document.getElementById("save-amt");
+    parseInt(amtAfterReduc);
+    let savings = document.getElementById("save-amt").value;
+    parseInt(savings);
 
     amtAfterReduc = (amtAfterReduc - savings) / 4;
     sessionStorage.setItem("budget", amtAfterReduc);
-    console.log(amtAfterReduc);
+}
+
+function getWeeklyBudget(){
+    let parentDiv = document.getElementById("circle-amt");
+    let para = document.createElement("p");
+    let weeklyBudget = sessionStorage.getItem("budget");
+    var budget = document.createTextNode(weeklyBudget);
+    para.appendChild(budget);  
+    console.log(para);
+
+    parentDiv.appendChild(para);
 }
